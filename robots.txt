@@ -1,0 +1,17 @@
+#
+# robots.txt for AL Mokhtar
+#
+
+User-agent: *
+Disallow: /assets/
+Disallow: /uploads/
+Disallow: /system/
+Disallow: /application/config
+Disallow: /application/core
+Disallow: /application/helpers
+Disallow: /application/hooks
+Disallow: /application/language
+Disallow: /application/libraries
+Disallow: /application/models
+Disallow: /application/third_party
+Disallow: /cgi-bin/
