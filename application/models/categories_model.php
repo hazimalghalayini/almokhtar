@@ -22,9 +22,10 @@ class Categories_model extends CI_Model {
 
         return $query->result_array();
     }
-    
-    function get_categories_names_ids() {
+
+    function get_categories_names_ids($limit = 6) {
         $this->db->select('category_id, category_name');
+        $this->db->limit($limit);
         $query = $this->db->get('news_categories');
 
         return $query->result_array();

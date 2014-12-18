@@ -4,121 +4,37 @@
 
             <!-- carousel start -->
             <div id="sync1" class="owl-carousel">
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img  src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-2.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-flask"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img   src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-3.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img  src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-4.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img   src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-5.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img  src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-6.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img  src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-7.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img   src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-8.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>
-                <div class="box item"> <a href="#">
-                        <div class="carousel-caption">نجح حارس مرمى لوريان الفرنسي بنجامين ليكومتي في التصدى لـ٣ فرص محققة بأقل من دقيقة واحدة في مباراة فريقه أمام بوردو بالدوري الفرنسي</div>
-                        <img  src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-1.jpg" width="762" height="360" alt=""/>
-                        <div class="overlay"></div>
-                        <div class="overlay-info">
-                            <div class="cat">
-                                <p class="cat-data"><span class="ion-model-s"></span>رياضة</p>
-                            </div>
-                            <div class="info">
-                                <p><span class="ion-clock"></span>Dec 16 2014<span class="ion-chatbubbles"></span>351</p>
-                            </div>
-                        </div>
-                    </a></div>  
+
+                <?php
+                foreach ($main_slider as $news) {
+                    echo '<div class="box item"> <a href="' . base_url('news/post/' . $news->news_id) . '">';
+                    echo '<div class="carousel-caption">' . $news->news_title . '</div>';
+                    echo '<img  src="' . base_url('uploads/news/' . $news->news_picture) . '" width="762" height="360" alt="' . $news->news_title . '" title="' . $news->news_title . '"/>';
+                    echo '<div class="overlay"></div>';
+                    echo '<div class="overlay"></div>';
+                    echo '<div class="overlay-info">';
+                    echo '<div class="cat">';
+                    echo '<p class="cat-data"><span class="ion-model-s"></span>' . $news->categoryName . '</p>';
+                    echo '</div>';
+                    echo '<div class="info">';
+                    echo '<p><span class="ion-clock"></span>' . date('Y-m-d', strtotime($news->publish_date)) . '<span class="ion-chatbubbles"></span>' . $news->comments_count . '</p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                    echo '</div>';
+                }
+                ?>
+
             </div>
             <div class="row">
                 <div id="sync2" class="owl-carousel">
-                    <div class="item"><img class="img-responsive" src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-2.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive" src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-3.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive " src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-4.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive " src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-5.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive " src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-6.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive" src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-7.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class="img-responsive " src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-8.jpg" width="762" height="360" alt=""/></div>
-                    <div class="item"><img class=" img-responsive" src="<?php echo base_url(); ?>assets/webpages/images/banner-slider/slide-img-1.jpg" width="762" height="360" alt=""/></div>
+
+                    <?php
+                    foreach ($main_slider as $news) {
+                        echo '<div class="item"><img class=" img-responsive" src="' . base_url('uploads/news/thumbs/' . $news->news_picture) . '" width="762" height="360" alt=""/></div>';
+                    }
+                    ?>
+
                 </div>
             </div>
         </div>

@@ -5,7 +5,9 @@ if (!defined('BASEPATH'))
 
 class News extends CI_Controller {
 
-    function __construct() {
+    private $_countryId;
+
+    public function __construct() {
         parent::__construct();
         $this->load->helper('form');
         $this->load->model('news_model');
@@ -13,11 +15,22 @@ class News extends CI_Controller {
         $this->load->model('settings_model');
         $this->load->model('pages_model');
         $this->load->model('categories_model');
+
+        $this->_countryId = '2'; // $this->ipToCountry($_SERVER['REMOTE_ADDR']);
+    }
+
+    function ipToCountry($ip = NULL) {
+        $info = file_get_contents("http://who.is/whois-ip/ip-address/$ip");
+        list($a, $b) = explode('country:', $info);
+        $countryCode = substr($b, 0, 2);
+        $coutryInfo = $this->news_model->getCountryId($countryCode);
+        return $coutryInfo->id;
     }
 
     public function index() {
-//        $data['categories'] = $this->categories_model->get_categories_names_ids();
-//        $data['main_slider'] = $this->news_model->getMainSliderNews();
+
+        $data['categories'] = $this->categories_model->get_categories_names_ids();
+        $data['main_slider'] = $this->news_model->getMainSliderNews($this->_countryId);
 //        $data['last_3_news'] = $this->news_model->last_3_news();
 //        $data['local_news_first_post'] = $this->news_model->recent_small_category_news('11');
 //        $data['fmale_news_post'] = $this->news_model->recent_small_category_news('14');
@@ -34,17 +47,16 @@ class News extends CI_Controller {
 //        $data['sliderPhotos'] = $this->media_model->imageSlider();
 //        $data['PhotosComments'] = $this->media_model->imageSlider(1);
 //        $data['videoSlider'] = $this->media_model->videoSlider();
-//        $data['widgetRecentNews'] = $this->news_model->widgetNews();
-//        $data['popular_4_news'] = $this->news_model->last_4_news('views');
-//        $data['widgetPopularNews'] = $this->news_model->widgetNews('views', 7);
+        $data['widgetRecentNews'] = $this->news_model->widgetNews($this->_countryId);
+        $data['recentNews'] = $this->news_model->last_4_news($this->_countryId);
+        $data['widgetPopularNews'] = $this->news_model->widgetNews($this->_countryId, 'news.views', 7);
 //        $data['widgetPoll'] = $this->get_poll();
 //        $data['RecentNewsSlider'] = $this->news_model->getRecentNewsSlider();
 //        $data['firstVideo'] = $this->media_model->firstVideo();
 //        $data['settings'] = $this->settings_model->get_settings();
 ////        $data['lastComment'] = $this->news_model->getPostComment('', 3);
 //        $data['categoryNewsMostComment'] = $this->news_model->most_commented();
-
-        $this->load->view('webpages/post_details');
+        $this->load->view('webpages/index', $data);
     }
 
     public function post() {
@@ -268,7 +280,7 @@ class News extends CI_Controller {
         $data['popular_4_news'] = $this->news_model->last_4_news('views');
         $data['widgetPoll'] = $this->get_poll();
         $data['settings'] = $this->settings_model->get_settings();
-        
+
         $this->load->view('webpages/contact', $data);
     }
 
@@ -286,7 +298,7 @@ class News extends CI_Controller {
         $data['categoryNewsMostComment'] = $this->news_model->most_commented();
         $data['widgetPoll'] = $this->get_poll();
         $data['settings'] = $this->settings_model->get_settings();
-        
+
         $this->load->library("pagination");
         $config = array();
         $config["base_url"] = base_url() . "news/search";
@@ -329,7 +341,7 @@ class News extends CI_Controller {
 
         $this->pagination->initialize($config);
         $data["pageNumber"] = $this->pagination->create_links();
-        
+
         $this->load->view('webpages/search', $data);
     }
 
@@ -345,7 +357,7 @@ class News extends CI_Controller {
         $data['popular_4_news'] = $this->news_model->last_4_news('views');
         $data['widgetPoll'] = $this->get_poll();
         $data['settings'] = $this->settings_model->get_settings();
-        
+
         $this->load->view('webpages/redirect', $data);
     }
 
@@ -464,6 +476,7 @@ class News extends CI_Controller {
                 mail("support@4newsm.com", 'رسالة استفسار من ' . $name, $message, "From: $email\n");
                 redirect(base_url() . 'news/redirect');
             } else {
+                
             }
         }
     }
@@ -481,8 +494,9 @@ class News extends CI_Controller {
                 mail("support@4newsm.com", 'الإشتراك بالقائمة البريدية', 'تم تسجيل بريدك في القائمة الإخبارية سوف يتم إرسال أخر الأخبار إلي بريدك الإلكتروني أولاً بأول', "From: $email\n");
                 redirect(base_url());
             } else {
+                
             }
         }
     }
-    
+
 }

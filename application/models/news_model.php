@@ -6,6 +6,14 @@ class News_model extends CI_Model {
         parent::__construct();
     }
 
+    function getCountryId($countryCode) {
+        $this->db->select('id');
+        $this->db->limit(1);
+        $this->db->where('country_code', $countryCode);
+        $query = $this->db->get('countries');
+        return $query->row();
+    }
+
     function add_slide_news($news_description) {
         $this->db->set('news_description', $news_description);
         $this->db->set('added_date', date('Y-m-d H:i:s'));
@@ -204,20 +212,21 @@ class News_model extends CI_Model {
         return $query;
     }
 
-    function last_3_news() {
-        $this->db->limit(3);
+    function last_3_news($limit = 5) {
+        $this->db->limit($limit);
         $this->db->order_by('publish_date', 'DESC');
         $query = $this->db->get('news');
         return $query->result();
     }
 
-    function last_4_news($orderBy = NULL) {
+    function last_4_news($countryId,$limit = 5,$orderBy = NULL) {
         !empty($orderBy) ? $this->db->order_by("$orderBy", 'desc') : '';
         $this->db->select('news.*,COUNT(comment_id) as comments_count');
         $this->db->join('comments', 'news.news_id = comments.news_id', 'left');
         $this->db->group_by('news.news_id');
         $this->db->order_by('publish_date', 'DESC');
-        $this->db->limit(4);
+        $this->db->limit($limit);
+        $this->db->where('country_id', $countryId);
         $query = $this->db->get('news');
         return $query->result();
     }
@@ -248,22 +257,31 @@ class News_model extends CI_Model {
         return $query->result();
     }
 
-    function widgetNews($orderBy = NULL, $limit = 7) {
-        !empty($orderBy) ? $this->db->order_by($orderBy, 'desc') : $this->db->order_by('publish_date', 'desc');
+    function widgetNews($countryId, $orderBy = NULL, $limit = 7) {
+        $this->db->select('news.news_id,news.views, news.news_title,news.news_picture, news.publish_date,count(comment_id) as comments_count');
+        $orderBy ? $this->db->order_by($orderBy, 'DESC') : $this->db->order_by('publish_date', 'DESC');
         $this->db->limit($limit);
-        $this->db->select('news_id, news_title, publish_date');
+        $this->db->join('comments', 'news.news_id = comments.news_id', 'left');
+        $this->db->where('news.country_id', $countryId);
         $query = $this->db->get('news');
         return $query->result();
     }
 
-    function getMainSliderNews() {
-        $this->db->select('news.news_id, news_title, news_description, news_picture,count(comment_id) as comments_count');
+    function getMainSliderNews($countryId) {
+        $this->db->select('news.news_id, news.news_title, news.news_description,news.publish_date, news.news_picture,news_categories.category_name as categoryName,count(comment_id) as comments_count');
+        $this->db->join('news_categories', 'news.category_id = news_categories.category_id', 'left');
         $this->db->join('comments', 'news.news_id = comments.news_id', 'left');
         $this->db->group_by('news.news_id');
         $this->db->where('main_slider', 1);
+        $this->db->where('country_id', $countryId);
         $this->db->limit(16);
         $this->db->order_by('publish_date', 'DESC');
         $query = $this->db->get('news');
+//
+//        echo '<pre>';
+//        print_r($query->result());
+//        echo '</pre>';
+
         return $query->result();
     }
 
@@ -380,8 +398,8 @@ class News_model extends CI_Model {
 
         return $query->result_array();
     }
-    
-    function get_countries_names_codes(){
+
+    function get_countries_names_codes() {
         $this->db->select('id, country_name');
         $query = $this->db->get('countries');
 
