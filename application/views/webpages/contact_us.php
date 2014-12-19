@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?=$this->config->item('website_name').' - تفاصيل الخبر'?></title>
+        <title><?= $this->config->item('website_name') . ' - إتصل بنا' ?></title>
         <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/webpages/images/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo base_url(); ?>assets/webpages/images/favicon.ico" type="image/x-icon">
         <!-- bootstrap styles-->
@@ -12,7 +12,7 @@
         <!-- google font -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800' rel='stylesheet' type='text/css'>
         <!-- ionicons font -->
-        <link href="<?php echo base_url(); ?>assets/webpages/css/ionicons.min.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>assets/webpages/css/ionicons.css" rel="stylesheet">
         <!-- animation styles -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/webpages/css/animate.css" />
         <!-- custom styles -->
@@ -57,11 +57,10 @@
             <!-- bage header Start -->
             <div class="container">
                 <div class="page-header">
-                    <h1>Section Topic Details </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li class="active">Section Topic Details</li>
+                    <h1>إتصل بنا</h1>
+                    <ol class="breadcrumb" dir="RTL">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li class="active">إتصل بنا</li>
                     </ol>
                 </div>
             </div>
@@ -71,55 +70,18 @@
                 <div class="container ">
                     <div class="row "> 
                         <!-- left sec Start -->
-                        <div class="col-md-11 col-sm-11">
+                        <div class="col-md-16 col-sm-16">
                             <div class="row"> 
-                                <!-- post details start -->
-                                <?php $this->load->view('webpages/includes/post_details'); ?>
-                                <!-- post details end --> 
+                                <!-- contact_us content start -->
+                                <?php $this->load->view('webpages/includes/contact_us'); ?>
+                                <!-- contact_us content end --> 
 
+                                <!--wide ad start-->
+                                <?php $this->load->view('webpages/includes/wide_ad'); ?>
+                                <!--wide ad end--> 
                             </div>
                         </div>
                         <!-- left sec End --> 
-
-                        <!-- right sec Start -->
-                        <div class="col-sm-5 hidden-xs right-sec">
-                            <div class="bordered top-margin">
-                                <div class="row ">
-                                    <!--sidebar ad start-->
-                                    <?php $this->load->view('webpages/includes/sidebar_ad'); ?>
-                                    <!--sidebar ad end--> 
-
-                                    <!-- social networks widget start -->
-                                    <?php $this->load->view('webpages/includes/social_networks_widget'); ?>
-                                    <!-- social networks widget end --> 
-
-                                    <!-- activities start -->
-                                    <?php $this->load->view('webpages/includes/activities_widget'); ?>
-                                    <!-- activities end --> 
-
-                                    <!--sidebar ad start-->
-                                    <?php $this->load->view('webpages/includes/sidebar_ad'); ?>
-                                    <!--sidebar ad end--> 
-
-                                    <!-- radio start -->
-                                    <?php $this->load->view('webpages/includes/soundcloud_widget'); ?>
-                                    <!-- radio end --> 
-
-                                    <!--sidebar ad start-->
-                                    <?php $this->load->view('webpages/includes/sidebar_ad'); ?>
-                                    <!--sidebar ad end--> 
-
-                                    <!-- currency start -->
-                                    <?php $this->load->view('webpages/includes/currency_widget'); ?>
-                                    <!-- currency end --> 
-
-                                    <!--sidebar ad start-->
-                                    <?php $this->load->view('webpages/includes/sidebar_ad'); ?>
-                                    <!--sidebar ad end-->  
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Right Sec End --> 
                     </div>
                 </div>
             </section>
@@ -180,5 +142,7 @@
         <script src="<?php echo base_url(); ?>assets/webpages/js/enquire.js"></script> 
         <!--custom functions--> 
         <script src="<?php echo base_url(); ?>assets/webpages/js/custom-fun.js"></script>
+        <!-- Tweeter API plugin -->
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/webpages/js/twitterfeed.js"></script>
     </body>
 </html>
