@@ -1,9 +1,9 @@
 <div class="col-sm-5 col-xs-5 business wow fadeInRight animated" data-wow-delay="0.5s" data-wow-offset="130">
     <div class="main-title-outer pull-left">
-        <div class="main-title3">أخبار مرئية</div>
+        <div class="main-title2">أخبار مرئية</div>
         <div class="span-outer"><span class="pull-left text-danger last-update"><span class="ion-plus icon"></span><a href="">عرض المزيد</a></span> </div>
     </div>
-    <div class="row left-bordered">
+    <div class="row">
         <div id="vid-thumbs" class="owl-carousel">
             <div class="item">
                 <div class="vid-thumb-outer">
