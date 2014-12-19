@@ -1,6 +1,6 @@
 <div class="col-sm-8 col-xs-16 wow fadeInRight animated" data-wow-delay="0.5s" data-wow-offset="130">
     <div class="main-title-outer pull-left">
-        <div class="main-title5">الأدب</div>
+        <div class="main-title6">الأدب</div>
         <div class="span-outer"><span class="pull-left text-danger last-update"><span class="ion-plus icon"></span><a href="">عرض المزيد</a></span> </div>
     </div>
     <div class="row">
